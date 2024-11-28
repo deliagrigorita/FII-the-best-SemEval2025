@@ -1,0 +1,3 @@
+# SemEval-task-2-2025
+
+We participate at SemEval task 2 2025 to develop machine translation systems that can accurately translate text that includes potentially challenging named entities in the source language. The task is to translate a given input sentence from the source language (English) to the target language, where the input sentence contains named entities that may be challenging for machine translation systems to handle. The named entities may be entities that are rare, ambiguous, or unknown to the machine translation system. The task is to develop machine translation systems that can accurately translate such named entities in the input sentence to the target language.

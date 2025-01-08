@@ -1,16 +1,23 @@
 # SemEval-task-2-2025
 
-We participate at SemEval task 2 2025 to develop machine translation systems that can accurately translate text that includes potentially challenging named entities in the source language. The task is to translate a given input sentence from the source language (English) to the target language, where the input sentence contains named entities that may be challenging for machine translation systems to handle. The named entities may be entities that are rare, ambiguous, or unknown to the machine translation system. The task is to develop machine translation systems that can accurately translate such named entities in the input sentence to the target language.
+This repository implements a pipeline for Entity-Aware Machine Translation (EA-MT), as described in the task introduced [here](https://sapienzanlp.github.io/ea-mt/docs/task/introduction). Our system focuses on preserving named entities (NEs) during translation while ensuring grammatically correct outputs.
 
-Examples
-Here are some examples of sentences that you may encounter in the EA-MT task:
 
-Example 1: English to French
-English Sentence: "I watched the movie 'The Shawshank Redemption' last night."
-French Sentence: "J'ai regardé le film 'Les Évadés' hier soir."
-Example 2: English to Italian
-English Sentence: "I bought a new book called 'The Catcher in the Rye'."
-Italian Sentence: "Ho comprato un nuovo libro chiamato 'Il Giovane Holden'."
-Example 3: English to Chinese
-English Sentence: "I watched the TV series 'Breaking Bad' last week."
-Chinese Sentence: "我上周看了电视剧《绝命毒师》。"
+
+This project focuses on Entity-Aware Machine Translation (EA-MT), ensuring the accurate handling of named entities during translation while maintaining grammatical correctness.
+
+Key steps in the process include:
+
+* Extracting named entities using the WikiNEuRal multilingual NER model.
+* Translating the entities with the Wikidata API to guarantee precision and contextual relevance.
+* Replacing entities in the original sentence with placeholders to translate the remaining content independently.
+* Translating the sentence without entities into the target language.
+* Replacing placeholders with translated entities and refining the final output to ensure grammatical accuracy.
+  
+This method is particularly effective for tasks where preserving the integrity of named entities is crucial. The implementation is modular and can be customized for different languages or translation requirements.
+
+
+
+
+
+

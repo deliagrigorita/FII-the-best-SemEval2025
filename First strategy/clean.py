@@ -22,4 +22,4 @@ def clean_jsonl(input_file, output_file):
             outfile.write(json.dumps(data, ensure_ascii=False) + '\n')
 
 # Example usage
-clean_jsonl('data/predictions/model_name/validation/es_ES.jsonl', 'cleaned_es_ES.jsonl')
+clean_jsonl('data/predictions/model_name/test/zh_TW.jsonl', 'cleaned_zh_TW.jsonl')

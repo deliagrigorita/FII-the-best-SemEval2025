@@ -6,20 +6,20 @@ This repository contains the implementation of our system for SemEval 2025 Task 
 
 Our system ranked **1st among models without fine-tuning, retrieval-augmented generation (RAG), or gold information** using our second strategy and **3rd using the first strategy**.
 
-## 🚀 Features
+## Features
 - Multilingual **Named Entity Recognition (NER)** and structured knowledge bases for preprocessing and integration.
 - **Large Language Models (LLMs)** with optimized prompts and validation mechanisms for improved entity translation.
 - Handles **ten languages**: Arabic, Chinese (Traditional), French, German, Italian, Japanese, Korean, Spanish, Thai, and Turkish.
 - Evaluated using **COMET and M-ETA** metrics.
 
-## 🛠 Strategies
+## Strategies
 ### First Strategy
 This approach relies on **multilingual Named Entity Recognition (NER)** to identify named entities before translation. The extracted entities are then mapped to **structured knowledge bases (e.g., Wikidata)** to ensure accurate translations. The modified sentences are translated using traditional machine translation models, with entity placeholders replaced after translation to maintain contextual accuracy.
 
 ### Second Strategy
 This approach leverages **Large Language Models (LLMs)** with optimized **prompt engineering and validation mechanisms**. Instead of relying on structured databases, this method dynamically refines translations by instructing LLMs to preserve named entities while ensuring fluency and grammatical correctness. The system is designed to adaptively correct entity preservation errors, making it more robust for diverse language pairs.
 
-## 📊 Results
+## Results
 Our system was evaluated on COMET and M-ETA scores:
 | Language | First Strategy | Second Strategy |
 |----------|---------------|----------------|
